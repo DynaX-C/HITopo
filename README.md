@@ -1,5 +1,6 @@
 # HITopo
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19134285.svg)](https://doi.org/10.5281/zenodo.19134285)
 This is the official repository for “Hierarchical Interaction Topology Improves Physical Consistency in Molecular Representation Learning for Binding Affinity Prediction”.
 
 ## Overview
