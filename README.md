@@ -21,7 +21,7 @@ sudo apt install openbabel
 ## Datasets and Resources
 We use three benchmark data-splitting protocols covering different levels of generalization difficulty:
 
-- **Temporal-split setting**: available [here]([GIGN/GIGN/data at main · guaguabujianle/GIGN · GitHub](https://github.com/guaguabujianle/GIGN/tree/main/GIGN/data))
+- **Temporal-split setting**: available [here](https://github.com/guaguabujianle/GIGN/tree/main/GIGN/data)
 - **Standard PDBbind2020 setting**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 - **CleanSplit protocol**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 
