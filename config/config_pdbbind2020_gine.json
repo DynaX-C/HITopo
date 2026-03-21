@@ -1,0 +1,42 @@
+{
+    "data_mode": "pdbbind2020",
+    "graph_pt_path": "./data_processed/pdbbind2020/train_graphs_pdbbind2020.pt",
+    "split_json_template": "./data/Data_PDBbind2020/PDBbind_original_train_val_split_f{fold}.json",
+
+    "casf16_graph_pt_path": "./data_processed/pdbbind2020/test_graphs_pdbbind2020_casf16.pt",
+    "casf16_indep_graph_pt_path": "./data_processed/pdbbind2020/test_graphs_pdbbind2020_casf16_indep.pt",
+    "casf13_graph_pt_path": "./data_processed/pdbbind2020/test_graphs_pdbbind2020_casf13.pt",
+    "casf13_indep_graph_pt_path": "./data_processed/pdbbind2020/test_graphs_pdbbind2020_casf13_indep.pt",
+    
+    "model": "gine",
+    "variant": "full",
+  
+    "node_features_dim": 35,
+    "hidden_channels": 256,
+    "dropout": 0.1,
+    "num_layers": 3,
+    "edge_dim": 8,
+    "num_classes": 1,
+    "eps": 0.0,
+    "train_eps": false,
+    "use_deg_norm": true,
+  
+    "batch_size": 128,
+    "lr": 0.0005,
+    "epochs": 5000,
+    "patience": 100,
+    "seed": 42,
+    "device": "cuda",
+
+    "fold": 0,
+
+    "model_paths": [
+      "./outputs/pdbbind_gine_full/best_full_gine_pdbbind_f0.pt",
+      "./outputs/pdbbind_gine_full/best_full_gine_pdbbind_f1.pt",
+      "./outputs/pdbbind_gine_full/best_full_gine_pdbbind_f2.pt",
+      "./outputs/pdbbind_gine_full/best_full_gine_pdbbind_f3.pt",
+      "./outputs/pdbbind_gine_full/best_full_gine_pdbbind_f4.pt"
+    ],
+
+    "out_dir": "./outputs/pdbbind_gine_full"
+  }

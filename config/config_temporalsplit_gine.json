@@ -1,0 +1,35 @@
+{
+    "data_mode": "temporalsplit",
+    "train_graph_pt_path": "./data_processed/temporalsplit/train_graphs_temporalsplit.pt",
+    "valid_graph_pt_path": "./data_processed/temporalsplit/valid_graphs_temporalsplit.pt",
+
+    "casf13_graph_pt_path": "./data_processed/temporalsplit/test_graphs_temporalsplit_casf13.pt",
+    "casf16_graph_pt_path": "./data_processed/temporalsplit/test_graphs_temporalsplit_casf16.pt",
+    "pdbbind19_graph_pt_path": "./data_processed/temporalsplit/test_graphs_temporalsplit_pdbbind19.pt",
+
+    "model": "gine",
+    "variant": "full",
+  
+    "node_features_dim": 35,
+    "hidden_channels": 256,
+    "dropout": 0.1,
+    "num_layers": 3,
+    "edge_dim": 8,
+    "num_classes": 1,
+    "eps": 0.0,
+    "train_eps": false,
+    "use_deg_norm": true,
+  
+    "batch_size": 128,
+    "lr": 0.0005,
+    "epochs": 5000,
+    "patience": 100,
+    "seed": 42,
+    "device": "cuda",
+
+    "model_paths": [
+      "./outputs/temporalsplit_gine_full/best_full_gine_temporalsplit_s42.pt"
+    ],
+
+    "out_dir": "./outputs/temporalsplit_gine_full"
+  }

@@ -1,0 +1,48 @@
+{
+    "data_mode": "cleansplit",
+    "graph_pt_path": "./data_processed/cleansplit/train_graphs_cleansplit.pt",
+    "split_json_template": "./data/Data_CleanSplit/PDBbind_cleansplit_train_val_split_f{fold}.json",
+
+    "casf16_graph_pt_path": "./data_processed/cleansplit/test_graphs_cleansplit_casf16.pt",
+    "casf16_indep_graph_pt_path": "./data_processed/cleansplit/test_graphs_cleansplit_casf16_indep.pt",
+    "casf13_graph_pt_path": "./data_processed/cleansplit/test_graphs_cleansplit_casf13.pt",
+    "casf13_indep_graph_pt_path": "./data_processed/cleansplit/test_graphs_cleansplit_casf13_indep.pt",
+
+    "model": "gat",
+    "variant": "full",
+  
+    "node_features_dim": 35,
+    "hidden_channels": 256,
+    "dropout": 0.1,
+    "num_layers": 3,
+    "edge_dim": 8,
+    "num_classes": 1,
+    "use_deg_norm": true,
+
+    "heads": 4,
+    "concat": true,
+    "negative_slope": 0.1,
+    "add_self_loops": false,
+    "fill_value": "mean",
+    "bias": false,
+    "residual": true,
+  
+    "batch_size": 128,
+    "lr": 0.0005,
+    "epochs": 5000,
+    "patience": 100,
+    "seed": 42,
+    "device": "cuda",
+
+    "fold": 0,
+
+    "model_paths": [
+      "./outputs/cleansplit_gat_full/best_full_gat_cleansplit_f0.pt",
+      "./outputs/cleansplit_gat_full/best_full_gat_cleansplit_f1.pt",
+      "./outputs/cleansplit_gat_full/best_full_gat_cleansplit_f2.pt",
+      "./outputs/cleansplit_gat_full/best_full_gat_cleansplit_f3.pt",
+      "./outputs/cleansplit_gat_full/best_full_gat_cleansplit_f4.pt"
+    ],
+
+    "out_dir": "./outputs/cleansplit_gat_full"
+  }
