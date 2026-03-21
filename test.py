@@ -180,7 +180,6 @@ if __name__ == "__main__":
             build_loader_from_graph_dict(
                 graph_dict,
                 batch_size=args.batch_size,
-                seed=args.seed
             )
 
         save_csv_path = os.path.join(
