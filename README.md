@@ -25,7 +25,7 @@ We use three benchmark data-splitting protocols covering different levels of gen
 - **Standard PDBbind2020 setting**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 - **CleanSplit protocol**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 
-The original PDBbind data are publicly available from [here]([PDBbind+](https://www.pdbbind-plus.org.cn/)).  
+The original PDBbind data are publicly available from [here](https://www.pdbbind-plus.org.cn/).  
 To facilitate reproduction, the preprocessed datasets and pretrained checkpoints used in this work can be downloaded from [here](https://doi.org/10.5281/zenodo.19134285).
 
 ## Build Your Own Dataset
