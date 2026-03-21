@@ -65,12 +65,7 @@ def extract_atom_features(pdb_file, ligand_name):
 
     if mol is None:
         print(f"Error: RDKit failed to read {pdb_file}.")
-    # mol = Chem.RemoveHs(mol, updateExplicitCount=True, sanitize=False)
-    # conf = mol.GetConformer()
-    # print(f"Number of atoms in the molecule: {mol.GetNumAtoms()}")
     for atom in mol.GetAtoms():
-        # pos = conf.GetAtomPosition(atom.GetIdx())
-        # print(atom.GetIdx(), atom.GetSymbol())
         symbol = one_hot_encoding(atom.GetSymbol(), ['C', 'N', 'O', 'S', 'F', 'P', 'Cl', 'Br', 'I', 'Unknown']) + \
                 one_hot_encoding(atom.GetDegree(),[0, 1, 2, 3, 4, 5, 6]) + \
                 one_hot_encoding(atom.GetImplicitValence(), [0, 1, 2, 3, 4, 5, 6]) + \
@@ -80,15 +75,6 @@ def extract_atom_features(pdb_file, ligand_name):
                     Chem.rdchem.HybridizationType.SP3D2
                     ]) + [atom.GetIsAromatic()]
         symbol = symbol + one_hot_encoding(atom.GetTotalNumHs(), [0, 1, 2, 3, 4])
-
-        # residue_info = atom.GetPDBResidueInfo().GetResidueName()
-
-        # if residue_info == ligand_name:
-        #     ligorpro = [0]
-        # else:
-        #     ligorpro = [1]
-
-        # features = ligorpro + symbol
         atom_feats.append(symbol)
         
     return atom_feats
