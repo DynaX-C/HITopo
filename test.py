@@ -152,7 +152,6 @@ if __name__ == "__main__":
 
     os.makedirs(args.out_dir, exist_ok=True)
 
-    # 保存测试实际使用的配置
     config_path = os.path.join(
         args.out_dir,
         f"test_config_{args.variant}_{args.model}_{args.data_mode}.json"
@@ -160,15 +159,12 @@ if __name__ == "__main__":
     with open(config_path, "w") as f:
         json.dump(vars(args), f, indent=4)
 
-    # 构建模型
     model = build_model(args)
 
-    # 支持单模型或模型列表
     model_paths = args.model_paths
     if isinstance(model_paths, str):
         model_paths = [model_paths]
 
-    # 读取所有测试集
     test_sets = get_test_sets(args)
 
     summary_rows = []
