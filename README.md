@@ -20,12 +20,12 @@ sudo apt install openbabel
 ## Datasets and Resources
 We use three benchmark data-splitting protocols covering different levels of generalization difficulty:
 
-- **Temporal-split setting**: available [here](https://github.com/guaguabujianle/GIGN/tree/main/GIGN/data)
+- **Temporal-split setting**: available [here]([GIGN/GIGN/data at main · guaguabujianle/GIGN · GitHub](https://github.com/guaguabujianle/GIGN/tree/main/GIGN/data))
 - **Standard PDBbind2020 setting**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 - **CleanSplit protocol**: available [here](https://github.com/camlab-ethz/GEMS/tree/main/PDBbind_data)
 
 The original PDBbind data are publicly available from [here]([PDBbind+](https://www.pdbbind-plus.org.cn/)).  
-To facilitate reproduction, the preprocessed datasets and pretrained checkpoints used in this work can be downloaded from [here](你的资源链接).
+To facilitate reproduction, the preprocessed datasets and pretrained checkpoints used in this work can be downloaded from [here](https://doi.org/10.5281/zenodo.19134285).
 
 ## Build Your Own Dataset
 In addition to the provided benchmarks, users can construct their own datasets from raw protein–ligand structures.
@@ -92,7 +92,7 @@ graphs = {
 These graphs correspond to different interaction levels, including atomic interactions, non-bonded interactions, and higher-order geometric structures.
 
 ## Training
-We provide preprocessed datasets for direct use, which can be downloaded from [here](链接).
+We provide preprocessed datasets for direct use, which can be downloaded from [here](https://doi.org/10.5281/zenodo.19134285).
 
 For example, to train the GINE backbone on the CleanSplit setting:
 ```bash
@@ -119,7 +119,7 @@ python train.py --config config/config_cleansplit_gine.json --num_layers 2
 Detailed configuration options are provided in the configuration files under `./config/`.
 
 ## Evaluation
-To facilitate evaluation, we provide pretrained checkpoints that can be downloaded from [here](链接).
+To facilitate evaluation, we provide pretrained checkpoints that can be downloaded from [here](https://doi.org/10.5281/zenodo.19134285).
 
 For example, to evaluate a model on the CleanSplit setting:
 ```bash
@@ -157,7 +157,7 @@ python dataset_min.py \
     --work_dir /path/to/data_dir \
     --output dataset.pt
 ```
-This pipeline depends on **AmberTools** for energy minimization before graph construction. Please note that this step can be computationally expensive and may take a substantial amount of time, especially for large datasets. To facilitate reproduction, the preprocessed data used for this analysis can be downloaded from [here](链接).
+This pipeline depends on **AmberTools** for energy minimization before graph construction. Please note that this step can be computationally expensive and may take a substantial amount of time, especially for large datasets. To facilitate reproduction, the preprocessed data used for this analysis can be downloaded from [here](https://doi.org/10.5281/zenodo.19134285).
 
 ### Energy calculation
 After energy minimization, MM/GBSA calculations can be performed using:
