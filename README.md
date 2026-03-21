@@ -59,9 +59,9 @@ Optionally, you can define custom data splits by providing a JSON file:
 ```bash
 python generate_data_csv.py \
     --index_file ./v2020/index/INDEX_general_PL_data.2020 \
-    --split_json ./data/CleanSplit/PDBbind_data_split_cleansplit.json \
-    --split_name casf2016 \
-    --output casf2016.csv
+    --split_json ./data/Data_CleanSplit/PDBbind_data_split_cleansplit.json \
+    --split_name train \
+    --output train.csv
 ```
 
 ### Data preprocessing
