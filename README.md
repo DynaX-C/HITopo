@@ -12,7 +12,7 @@ We recommend using Conda to manage the environment and dependencies. The require
 conda env create -f environment.yml
 conda activate HITopo
 ```
-**Note:** Open Babel is required for molecular file processing. On Ubuntu/Debian systems, install it with:
+**Note:** OpenBabel is required for molecular file processing. On Ubuntu/Debian systems, install it with:
 ```bash
 sudo apt update
 sudo apt install openbabel
