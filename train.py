@@ -159,7 +159,6 @@ if __name__ == "__main__":
         train_fold["dihedral"],
         batch_size=args.batch_size,
         shuffle=True,
-        seed=42,
     )
 
     val_atom_loader, val_nb_atom_loader, val_bd_atom_loader, val_bond_loader, val_angle_loader, val_dihedral_loader = data_loader(
@@ -171,7 +170,6 @@ if __name__ == "__main__":
         val_fold["dihedral"],
         batch_size=args.batch_size,
         shuffle=False,
-        seed=42,
     )
 
     model = build_model(args)
