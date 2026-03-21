@@ -66,13 +66,15 @@ python generate_data_csv.py \
 
 ### Data preprocessing
 After preparing the structure files and index file, the dataset can be processed in two steps.
-**Step 1: Extract ligand and binding pocket**
+
+#### Step 1: Extract ligand and binding pocket**
 ```bash
 python dataprep.py \
     --index_file /path/to/index.csv \
     --work_dir /path/to/data_dir
 ```
-**Step 2: Construct hierarchical graph representations**
+
+#### Step 2: Construct hierarchical graph representations
 ```bash
 python dataset.py \
     --index_file /path/to/index.csv \
