@@ -1,7 +1,7 @@
 # HITopo
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19134285.svg)](https://doi.org/10.5281/zenodo.19134285)            
-This is the official repository for “Hierarchical Interaction Topology Improves Physical Consistency in Molecular Representation Learning for Binding Affinity Prediction”.
+This is the official repository for “Hierarchical Interaction Topology for Physically Consistent Molecular Representation Learning”.
 
 ## Overview
 HITopo is a graph representation framework for molecular interaction modeling and protein–ligand binding affinity prediction. It explicitly captures the hierarchical organization of molecular interactions by integrating non-bonded interactions, covalent connectivity, and higher-order geometric relationships within a unified architecture. The framework is compatible with diverse graph neural network backbones and consistently improves predictive performance across multiple evaluation settings. This repository includes resources for environment setup, dataset preparation, model training, inference, and example applications.
