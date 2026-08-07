@@ -67,7 +67,7 @@ python generate_data_csv.py \
 ### Data preprocessing
 After preparing the structure files and index file, the dataset can be processed in two steps.
 
-#### Step 1: Extract ligand and binding pocket**
+#### Step 1: Extract ligand and binding pocket
 ```bash
 python dataprep.py \
     --index_file /path/to/index.csv \
