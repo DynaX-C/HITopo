@@ -1,10 +1,15 @@
 # HITopo
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19134285.svg)](https://doi.org/10.5281/zenodo.19134285)            
-This is the official repository for “Hierarchical Interaction Topology for Physically Consistent Molecular Representation Learning”.
+This is the official repository for “Hierarchical Interaction Topology for Physics-Inspired Molecular Representation Learning”.
 
 ## Overview
-HITopo is a graph representation framework for molecular interaction modeling and protein–ligand binding affinity prediction. It explicitly captures the hierarchical organization of molecular interactions by integrating non-bonded interactions, covalent connectivity, and higher-order geometric relationships within a unified architecture. The framework is compatible with diverse graph neural network backbones and consistently improves predictive performance across multiple evaluation settings. This repository includes resources for environment setup, dataset preparation, model training, inference, and example applications.
+
+HITopo is a physics-inspired molecular representation framework that organises molecular interactions along two complementary dimensions: interaction type and interaction order. It separates bonded and non-bonded atomic interactions, represents higher-order angular and dihedral relationships through bond- and angle-centred topologies, and enables incidence-guided coupling across interaction orders.
+
+HITopo separates representation topology from the choice of message-passing operator and can therefore be instantiated with different graph neural network backbones, including GCN, GAT, and GINE. Protein–ligand binding affinity prediction is used as the principal validation task, where HITopo consistently improves these backbones across multiple generalisation settings.
+
+This repository provides resources for environment setup, dataset preparation, model training, inference, evaluation, and example applications.
 
 ## Installation
 We recommend using Conda to manage the environment and dependencies. The required packages can be installed with the provided configuration file:
