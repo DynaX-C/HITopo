@@ -79,8 +79,8 @@ loadamberparams ligand_bcc.frcmod
 
 p = loadpdb {protein_pdb}
 l = loadmol2 ligand_bcc.mol2
-c = combine {{ p l }}
 {ssbond_leap}
+c = combine {{ p l }}
 
 savepdb p pro.pdb
 savepdb l lig.pdb
