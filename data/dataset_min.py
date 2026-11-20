@@ -50,7 +50,7 @@ def main():
         pdbid = row['pdbid']
         label = row['-logKd/Ki']
         pdb_dir = f"{work_dir}/{pdbid}/"
-        pdb_file = os.path.join(pdb_dir, "complex_5A.pdb")
+        pdb_file = os.path.join(pdb_dir, "complex_5A_em.pdb")
 
         if not os.path.exists(pdb_file):
             print(f"Files for {pdbid} not found, skipping...")
@@ -60,7 +60,7 @@ def main():
         # load structure
         structure = pmd.load_file(pdb_file)
         structure = structure['!@H=']   # remove hydrogens
-        noh_pdb_file = os.path.join(work_dir, "complex_5A_em_noH.pdb")
+        noh_pdb_file = os.path.join(pdb_dir, "complex_5A_em_noH.pdb")
         structure.save(noh_pdb_file, overwrite=True)
 
         res_ids = get_resids(structure, "MOL")
